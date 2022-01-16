@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --color-blue: rgb(31, 28, 226);
+  --color-red: rgb(255, 0, 0);
+  --color-green: rgb(21, 185, 21);
+  --color-yellow: rgb(223, 226, 28);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.game-container {
+  height: 650px;
+  width: 650px;
+  margin: 1em;
+}
+
+.container-1,
+.container-3 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.container-2 {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.coin-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-box {
+  background-color: var(--color-red);
+}
+
+.green-box {
+  background-color: var(--color-green);
+}
+
+.blue-box {
+  background-color: var(--color-blue);
+}
+
+.yellow-box {
+  background-color: var(--color-yellow);
+}
+
+.coin-holder {
+  background-color: #fff;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+[data-coins] {
+  width: 3em;
+  height: 3em;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.path-vertical {
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+
+.finish-container {
+  height: 100%;
+  width: 20%;
+  border: 1px solid black;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+}
+
+.path-horizontal {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex-basis: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  height: 100%;
+  flex-basis: 1;
+  width: 100%;
+  display: flex;
+}
+
+.cells {
+  flex-basis: 1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+[data-cell-color="green"] {
+  background-color: var(--color-green);
+}
+
+[data-cell-color="blue"] {
+  background-color: var(--color-blue);
+}
+
+[data-cell-color="yellow"] {
+  background-color: var(--color-yellow);
+}
+
+[data-cell-color="red"] {
+  background-color: var(--color-red);
+}
+
+[data-cell-safe]::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.coin-red {
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+  border: 5px solid #fff;
+  margin: auto;
+  justify-self: center;
+  background-color: var(--color-red);
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.coin-red:hover {
+  background-color: rgb(231, 28, 62);
+}
+
+.coin-green {
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+  border: 5px solid #fff;
+  margin: auto;
+  justify-self: center;
+  background-color: var(--color-green);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.coin-green:hover {
+  background-color: rgb(89, 214, 80);
+}
+
+.coin-yellow {
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+  border: 5px solid #fff;
+  margin: auto;
+  justify-self: center;
+  background-color: var(--color-yellow);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.coin-yellow:hover {
+  background-color: rgb(147, 149, 24);
+}
+
+.coin-blue {
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+  border: 5px solid #fff;
+  margin: auto;
+  justify-self: center;
+  background-color: var(--color-blue);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.coin-blue:hover {
+  background-color: rgb(87, 101, 233);
+}
+
+.control-panel {
+  width: 30%;
+  height: inherit;
+  border: 1px solid black;
+  margin: 1em;
+}
+
+.dice {
+  padding: 0.4em 0.8em;
+  margin: 1em;
+  border: 0;
+  font-size: 2.2em;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: hotpink;
+  cursor: pointer;
+  color: rgb(39, 22, 38);
+}
+
+.dice:hover {
+  padding: 0.4em 0.8em;
+  margin: 1em;
+  border: 0;
+  font-size: 2.2em;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(207, 81, 144);
+  color: rgb(39, 22, 38);
+}
+
+.dice-value {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.finish-cell {
+  /* flex-basis: 1; */
+  width: 34%;
+  height: 34%;
+  border: 1px solid pink;
+}
+
+.red-cell-finish {
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.blue-cell-finish {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+}
+
+.green-cell-finish {
+  position: absolute;
+  right: 40px;
+}
+
+.yellow-cell-finish {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+}

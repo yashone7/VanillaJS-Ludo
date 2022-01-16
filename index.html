@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <script src="index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-container">
+        <div class="container-1">
+          <div class="coin-container red-box">
+            <div class="coin-holder">
+              <div data-coins="red" class="red-box">
+                <i class="fi fi-rr-gamepad coin-red red-box" id="red-1"></i>
+              </div>
+              <div data-coins="red" class="red-box">
+                <i class="fi fi-rr-gamepad coin-red red-box" id="red-2"></i>
+              </div>
+              <div data-coins="red" class="red-box">
+                <i class="fi fi-rr-gamepad coin-red red-box" id="red-3"></i>
+              </div>
+              <div data-coins="red" class="red-box">
+                <i class="fi fi-rr-gamepad coin-red red-box" id="red-4"></i>
+              </div>
+            </div>
+          </div>
+          <div class="path-vertical">
+            <div class="row">
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+              ></div>
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+              ></div>
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+                data-cell-safe="safe-1"
+              ></div>
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+              ></div>
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+              ></div>
+              <div
+                class="cells"
+                data-cell-direction="up-top"
+                data-cell-path="column"
+              ></div>
+            </div>
+            <div class="row">
+              <div class="cells" data-cell-path="column" index="12"></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="green"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="green"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="green"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="green"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="green"
+              ></div>
+            </div>
+            <div class="row">
+              <div class="cells" index="13" data-cell-path="column"></div>
+              <div
+                class="cells"
+                index="14"
+                data-cell-path="column"
+                data-cell-safe="safe-2"
+                data-cell-color="green"
+              ></div>
+              <div class="cells" index="15" data-cell-path="column"></div>
+              <div class="cells" index="16" data-cell-path="column"></div>
+              <div class="cells" index="17" data-cell-path="column"></div>
+              <div class="cells" index="18" data-cell-path="column"></div>
+            </div>
+          </div>
+          <div class="coin-container green-box">
+            <div class="coin-holder">
+              <div data-coins="green" class="green-box">
+                <div class="coin-green" id="green-1"></div>
+              </div>
+              <div data-coins="green" class="green-box">
+                <div class="coin-green" id="green-2"></div>
+              </div>
+              <div data-coins="green" class="green-box">
+                <div class="coin-green" id="green-3"></div>
+              </div>
+              <div data-coins="green" class="green-box">
+                <div class="coin-green" id="green-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-2">
+          <div class="path-horizontal">
+            <div class="column">
+              <div index="51" class="cells"></div>
+              <div
+                class="cells"
+                index="1"
+                data-cell-safe="safe-3"
+                data-cell-color="red"
+              ></div>
+              <div index="2" class="cells"></div>
+              <div index="3" class="cells"></div>
+              <div index="4" class="cells"></div>
+              <div index="5" class="cells"></div>
+            </div>
+            <div class="column">
+              <div class="cells" index="50"></div>
+              <div class="cells" date-red-zone="1" data-cell-color="red"></div>
+              <div class="cells" data-red-zone="2" data-cell-color="red"></div>
+              <div class="cells" data-red-zone="3" data-cell-color="red"></div>
+              <div class="cells" data-red-zone="4" data-cell-color="red"></div>
+              <div class="cells" data-red-zone="5" data-cell-color="red"></div>
+            </div>
+            <div class="column">
+              <div class="cells" index="49"></div>
+              <div class="cells" index="48"></div>
+              <div class="cells" index="47" data-cell-safe="safe-4"></div>
+              <div class="cells" index="46"></div>
+              <div class="cells" index="45"></div>
+              <div class="cells" index="44"></div>
+            </div>
+          </div>
+          <div class="finish-container">
+            <div
+              class="finish-cell red-cell-finish red-box"
+              data-red-zone="6"
+            ></div>
+            <div
+              class="finish-cell blue-cell-finish blue-box"
+              data-blue-zone="6"
+            ></div>
+            <div
+              class="finish-cell green-cell-finish green-box"
+              data-green-zone="6"
+            ></div>
+            <div
+              class="finish-cell yellow-cell-finish yellow-box"
+              data-yellow-zone="6"
+            ></div>
+          </div>
+          <div class="path-horizontal">
+            <div class="column">
+              <div index="19" class="cells" data-cell-path="row"></div>
+              <div index="20" class="cells" data-cell-path="row"></div>
+              <div index="21" class="cells" data-cell-path="row"></div>
+              <div
+                index="22"
+                class="cells"
+                data-cell-path="row"
+                data-cell-safe="safe-5"
+              ></div>
+              <div index="23" class="cells" data-cell-path="row"></div>
+              <div index="24" class="cells" data-cell-path="row"></div>
+            </div>
+            <div class="column">
+              <div
+                class="cells"
+                data-blue-zone="5"
+                data-cell-color="blue"
+              ></div>
+              <div
+                class="cells"
+                data-blue-zone="4"
+                data-cell-color="blue"
+              ></div>
+              <div
+                class="cells"
+                data-blue-zone="3"
+                data-cell-color="blue"
+              ></div>
+              <div
+                class="cells"
+                data-blue-zone="2"
+                data-cell-color="blue"
+              ></div>
+              <div
+                class="cells"
+                data-blue-zone="1"
+                data-cell-color="blue"
+              ></div>
+              <div class="cells" index="25"></div>
+            </div>
+            <div class="column">
+              <div index="31" class="cells"></div>
+              <div index="30" class="cells"></div>
+              <div index="29" class="cells"></div>
+              <div index="28" class="cells"></div>
+              <div
+                class="cells"
+                data-cell-safe="safe-6"
+                data-cell-color="blue"
+                index="27"
+              ></div>
+              <div class="cells" index="26"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container-3">
+          <div class="coin-container yellow-box">
+            <div class="coin-holder">
+              <div data-coins="yellow" class="yellow-box">
+                <div class="coin-yellow" id="yellow-1"></div>
+              </div>
+              <div data-coins="yellow" class="yellow-box">
+                <div class="coin-yellow" id="yellow-1"></div>
+              </div>
+              <div data-coins="yellow" class="yellow-box">
+                <div class="coin-yellow" id="yellow-1"></div>
+              </div>
+              <div data-coins="yellow" class="yellow-box">
+                <div class="coin-yellow" id="yellow-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="path-vertical">
+            <div class="row">
+              <div index="43" class="cells" data-cell-path="column"></div>
+              <div index="42" class="cells" data-cell-path="column"></div>
+              <div index="41" class="cells" data-cell-path="column"></div>
+              <div index="40" class="cells" data-cell-path="column"></div>
+              <div
+                index="39"
+                class="cells"
+                data-cell-path="column"
+                data-cell-safe="safe-7"
+                data-cell-color="yellow"
+              ></div>
+              <div index="38" class="cells" data-cell-path="column"></div>
+            </div>
+            <div class="row">
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="yellow"
+                data-yellow-zone="1"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="yellow"
+                data-yellow-zone="2"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="yellow"
+                data-yellow-zone="3"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="yellow"
+                data-yellow-zone="4"
+              ></div>
+              <div
+                class="cells"
+                data-cell-path="column"
+                data-cell-color="yellow"
+                data-yellow-zone="5"
+              ></div>
+              <div class="cells" index="37" data-cell-path="column"></div>
+            </div>
+            <div class="row">
+              <div index="31" class="cells"></div>
+              <div index="32" class="cells"></div>
+              <div index="33" class="cells"></div>
+              <div index="34" class="cells" data-cell-safe="safe-8"></div>
+              <div index="35" class="cells"></div>
+              <div index="36" class="cells"></div>
+            </div>
+          </div>
+          <div class="coin-container blue-box">
+            <div class="coin-holder">
+              <div data-coins="blue" class="blue-box">
+                <div class="coin-blue" id="blue-1"></div>
+              </div>
+              <div data-coins="blue" class="blue-box">
+                <div class="coin-blue" id="blue-1"></div>
+              </div>
+              <div data-coins="blue" class="blue-box">
+                <div class="coin-blue" id="blue-1"></div>
+              </div>
+              <div data-coins="blue" class="blue-box">
+                <div class="coin-blue" id="blue-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="control-panel">
+        <button class="dice" id="dice">Roll dice</button>
+      </div>
+    </div>
+  </body>
+</html>
